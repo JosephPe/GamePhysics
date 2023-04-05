@@ -56,12 +56,12 @@ public class RigidbodyCharacter : MonoBehaviour
 		if (isRelative)
 		{
 			rb.AddRelativeForce(direction * speed, ForceMode.Force);
-			rb.AddRelativeForce(rotate * turnRate, ForceMode.Force);
+			rb.AddRelativeForce(rotate * turnRate); //ForceMode.Force is implied anyway
 		}
 		else
 		{
 			rb.AddForce(direction * speed, ForceMode.Force);
-			rb.AddForce(rotate * turnRate, ForceMode.Force);
+			rb.AddForce(rotate * turnRate);
 		}
 	}
 }
